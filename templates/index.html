@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Healthcare FAQ AI</title></head>
+<body style="font-family:system-ui,Arial;margin:2rem">
+  <h2>Healthcare FAQ Chatbot</h2>
+  <form method="POST" style="display:flex;gap:.5rem;margin:1rem 0;max-width:500px">
+    <input type="text" name="question" placeholder="Ask a question..." required style="flex:1;padding:.9rem">
+    <button type="submit" style="padding:.6rem 1rem">Ask</button>
+  </form>
+  {% if answer %}
+  <div style="padding:.6rem;border:1px solid #eee;border-radius:.5rem;background:#fafafa;font-size:.8rem, max-width:360px">
+
+    <p><strong>Your question:</strong> {{ question }}</p>
+    <p><strong>Answer:</strong> {{ answer }}</p>
+  </div>
+  {% endif %}
+</body></html>
